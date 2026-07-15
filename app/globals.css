@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f2ee;
+  --foreground: #141414;
+}
+
+::selection {
+  background: #cdff5c;
+  color: #141414;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth scrolling base; Lenis adds gentle momentum on top. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-container px-5 sm:px-12;
+  }
+  /* Purple pill — the mockup's primary button. */
+  .pill-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-grape;
+  }
+  /* Lime pill — chips, join buttons, stickers. */
+  .pill-lime {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-lime px-6 py-3 text-sm font-bold text-ink transition-colors duration-200 hover:bg-limedark;
+  }
+  /* Quiet outlined pill. */
+  .pill-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/25 bg-transparent px-6 py-3 text-sm font-semibold text-ink transition-colors duration-200 hover:border-ink;
+  }
+  /* Legacy names kept so unused components still compile. */
+  .eyebrow {
+    @apply text-[11px] uppercase tracking-[0.2em] text-violet font-semibold;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-lime px-6 py-3 text-sm font-bold text-ink transition-colors duration-200 hover:bg-limedark;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/25 px-6 py-3 text-sm font-semibold text-ink transition-colors duration-200 hover:border-ink;
+  }
+  .btn-violet {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-grape;
+  }
+  .rule,
+  .gold-rule {
+    @apply h-[3px] w-8 bg-lime;
+  }
+  .grad-rule {
+    @apply h-px w-full bg-line;
+  }
+}
+
+/* Hide scrollbars on horizontal scrollers but keep function */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gentle horizontal marquee for the photo strip */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 55s linear infinite;
+}
+.marquee-group:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-marquee,
+  .animate-kenburns {
+    animation: none;
+  }
+}
