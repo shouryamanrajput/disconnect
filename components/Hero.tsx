@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pb-16 pt-28 sm:pb-24 sm:pt-32"
+      className="relative overflow-hidden pb-8 pt-24 sm:pb-24 sm:pt-32"
     >
       {/* Soft gradient blobs, like the mockup's airy backdrop. */}
       <div aria-hidden className="absolute inset-0 -z-10">
@@ -51,7 +51,7 @@ export default function Hero() {
           Disconnect
         </motion.h1>
 
-        <div className="mt-6 grid items-start gap-12 sm:grid-cols-[1.05fr_0.95fr] sm:gap-8">
+        <div className="mt-4 grid items-start gap-6 sm:mt-6 sm:grid-cols-[1.05fr_0.95fr] sm:gap-8">
           {/* Left — pitch. */}
           <div>
             <motion.h2
@@ -80,7 +80,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.26, ease }}
-              className="mt-8 flex flex-wrap items-center gap-3"
+              className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8"
             >
               <a href="#events" className="pill-primary">
                 Explore Events <span aria-hidden>↗</span>
@@ -94,7 +94,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4, ease }}
-              className="mt-9 flex items-center gap-3"
+              className="mt-7 flex items-center gap-3 sm:mt-9"
             >
               <span className="flex -space-x-2.5">
                 {AVATARS.map((src) => (
@@ -119,7 +119,7 @@ export default function Hero() {
           </div>
 
           {/* Right — the pixel smiley with orbit, sparkles and sticker. */}
-          <div className="relative mx-auto h-[300px] w-full max-w-[430px] sm:h-[360px]">
+          <div className="relative mx-auto h-[250px] w-full max-w-[430px] sm:h-[360px]">
             {/* orbit ring */}
             <svg
               viewBox="0 0 460 300"
@@ -163,7 +163,7 @@ export default function Hero() {
                       : { duration: 5.5, repeat: Infinity, ease: "easeInOut" }
                   }
                 >
-                  <PixelSmiley className="h-52 w-52 drop-shadow-[0_18px_30px_rgba(108,79,240,0.25)] sm:h-60 sm:w-60" />
+                  <PixelSmiley className="h-44 w-44 drop-shadow-[0_18px_30px_rgba(108,79,240,0.25)] sm:h-60 sm:w-60" />
                 </motion.div>
               </motion.div>
             </div>

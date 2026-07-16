@@ -59,7 +59,7 @@ export default function JoinCommunity() {
   return (
     <section id="join" className="scroll-mt-24 py-8 sm:py-12">
       <div className="container-px">
-        <div className="relative rounded-[2rem] border border-ink/10 bg-paper px-6 py-12 text-center shadow-[0_24px_60px_-30px_rgba(20,20,20,0.25)] sm:px-12 sm:py-14">
+        <div className="relative rounded-[2rem] border border-ink/10 bg-paper px-6 py-10 text-center shadow-[0_24px_60px_-30px_rgba(20,20,20,0.25)] sm:px-12 sm:py-14">
           {/* ticket sticker */}
           <div className="absolute -top-5 left-4 -rotate-6 sm:left-8">
             <span className="inline-block rounded-md bg-lime px-4 py-2.5 text-[11px] font-extrabold uppercase leading-tight tracking-wide text-ink shadow-md">

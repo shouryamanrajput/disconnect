@@ -64,8 +64,8 @@ export default function WhyDisconnect() {
   return (
     <section id="why" className="scroll-mt-24 py-8 sm:py-12">
       <div className="container-px">
-        <Reveal className="rounded-[2rem] bg-[linear-gradient(105deg,#CFC6F5_0%,#CFE3FF_45%,#DDF3B5_100%)] p-8 sm:p-12">
-          <div className="grid items-center gap-10 sm:grid-cols-[0.85fr_1.15fr]">
+        <Reveal className="rounded-[2rem] bg-[linear-gradient(105deg,#CFC6F5_0%,#CFE3FF_45%,#DDF3B5_100%)] p-6 sm:p-12">
+          <div className="grid items-center gap-8 sm:grid-cols-[0.85fr_1.15fr] sm:gap-10">
             <div>
               <h2 className="font-display text-4xl leading-tight text-ink sm:text-5xl">
                 Why

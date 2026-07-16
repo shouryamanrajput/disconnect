@@ -89,7 +89,7 @@ const EVENTS: Array<{
 // The mockup's "Trending Experiences" grid — dark cards, lime badges.
 export default function TrendingExperiences() {
   return (
-    <section id="events" className="scroll-mt-24 py-14 sm:py-20">
+    <section id="events" className="scroll-mt-24 py-10 sm:py-20">
       <div className="container-px">
         <Reveal className="flex flex-wrap items-center justify-between gap-4">
           <span className="inline-flex items-center gap-2 rounded-full bg-lime px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-ink">
@@ -117,7 +117,7 @@ export default function TrendingExperiences() {
           </a>
         </Reveal>
 
-        <div className="mt-7 grid gap-5 sm:grid-cols-4">
+        <div className="mt-6 grid gap-4 sm:mt-7 sm:grid-cols-4 sm:gap-5">
           {EVENTS.map((e, i) => (
             <Reveal
               key={e.title}

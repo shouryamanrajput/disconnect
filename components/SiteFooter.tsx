@@ -4,8 +4,8 @@ import PixelSmiley from "@/components/PixelSmiley";
 // The mockup's lavender footer — brand, links, and the lime ticket sticker.
 export default function SiteFooter() {
   return (
-    <footer id="contact" className="mt-10 scroll-mt-24 bg-lavender">
-      <div className="container-px grid gap-10 py-12 sm:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
+    <footer id="contact" className="mt-6 scroll-mt-24 bg-lavender sm:mt-10">
+      <div className="container-px grid gap-7 py-10 sm:grid-cols-[1.2fr_0.8fr_0.8fr_1fr] sm:gap-10 sm:py-12">
         <div>
           <a href="#top" className="flex items-center gap-2">
             <span className="font-display text-2xl lowercase tracking-tight text-ink">
